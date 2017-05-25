@@ -7,7 +7,6 @@ var userGuesses = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', '
 //Everything is now user ready to start
 var wins = 0;
 var losses = 0;
-var guesses = 10;
 var guessesLeft = 10;
 var guessedLetters = [];
 
@@ -16,32 +15,45 @@ document.onkeyup = function(event) {
 
 var userGuesses = event.key;
 
+//comp picks random letter
 var compGuesses = compChoices[Math.floor(Math.random() * compChoices.length)];
     console.log('userGuesses', userGuesses, 'compGuesses', compGuesses); 
 
-      //Wins
-      if (userGuess === compGuesses) {
-        wins ++;
-      } else {
-        userGuesses --;
+
+
+//Wins & Losses
+if (userGuesses === compGuesses) {
+    wins ++;
+      } 
+if (userGuesses != compGuesses) {
+    guessesLeft--,
+    document.getElementById('guessesLeft').innerHTML = "Guesses Left: " guessesLeft;
       }
 
-      //Reset
-      if (guessesLeft > 0){
-            if (userGuesses == compGuesses){
+// logs everything to verify working
+      console.log('wins: ', wins, 'losses: ', losses, 'guesses left: ', guessesLeft, 'guessed letters: ', guessedLetters)
+
+
+//Actual reset
+var reset = function() {
+  guessesLeft = 10;
+  guessedLetters = [];
+}
+
+//calls the reset
+if (guessesLeft > 0){
+            if (userGuesses == compGuesses) {
+              //update wins
                 wins++;
-                document.querySelector('#wins').innerHTML = "Wins: " + wins;
-                alert("OMG YOU ARE PSYCHIC!! So what are the lottery numbers?!");
+                document.getElementById('wins').innerHTML = "Wins: " wins;
+                alert("OMG YOU ARE PSYCHIC!! NOW WHAT'S THE LOTTERY NUMBERS?!");
                 reset();
             }
         }else if(guessesLeft == 0){
-
-            //update the losses
+            // update losses 
             losses++;
-            document.querySelector('#losses').innerHTML = "Losses: " + losses;
-            alert("Not trying to be rude but you may want to try again?!");
-            
-            // then the page will start over no reload necessary 
+            document.getElementById('losses').innerHTML = "Losses: " losses;
+            alert("Sorry but you might want to try again?!"); 
             reset();
-          }
-        }; 
+        }
+};
