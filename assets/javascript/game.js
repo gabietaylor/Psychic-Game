@@ -1,7 +1,7 @@
 //What the comp chooses
 var compChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-//What the comp chooses    
+//What the user chooses    
 var userGuesses = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 //Everything is now user ready to start
@@ -22,10 +22,10 @@ var compGuesses = compChoices[Math.floor(Math.random() * compChoices.length)];
 
 //Logging keys pressed
 guessedLetters.push(userGuesses);
-document.getElementById('guessedLetters').innerHTML = "Guess Letters: " + guessedLetters.entries(': ');   
+document.getElementById('guessedLetters').innerHTML = "Guess Letters: " + guessedLetters.join(': ');   
 
 //Wins & Losses
-if (userGuesses === compGuesses) {
+if (userGuesses == compGuesses) {
     wins ++;
       } 
 if (userGuesses != compGuesses) {
@@ -47,16 +47,15 @@ var reset = function() {
 if (guessesLeft > 0){
             if (userGuesses == compGuesses) {
               //update wins
-                wins++;
                 document.getElementById('wins').innerHTML = "Wins: " + wins;
                 alert("OMG YOU ARE PSYCHIC!! NOW WHAT'S THE LOTTERY NUMBERS?!");
                 reset();
             }
         }else if(guessesLeft == 0){
-            // update losses 
-            losses++;
-            document.getElementById('losses').innerHTML = "Losses: " + losses;
-            alert("Sorry but you might want to try again?!"); 
-            reset();
+              // update losses 
+              losses++;
+              document.getElementById('losses').innerHTML = "Losses: " + losses;
+              alert("Sorry but you might want to try again?!"); 
+              reset();
         }
 };
