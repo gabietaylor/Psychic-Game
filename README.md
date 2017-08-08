@@ -8,7 +8,7 @@ Press any key to start & good luck!!
 
 ### Click on pics for link to page!!
 # Main Page
-[![Alt text](assets/images/psychic1.png](https://gabietaylor.github.io/Psychic-Game/)
+[![Alt text](assets/images/psychic.png](https://gabietaylor.github.io/Psychic-Game/)
 # Wins
 [![Alt text](assets/images/psychic2.png](https://gabietaylor.github.io/Psychic-Game/)
 # Losses
