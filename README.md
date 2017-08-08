@@ -8,10 +8,10 @@ Press any key to start & good luck!!
 
 ### Click on pics for link to page!!
 # Main Page
-[![Alt text](assets/images/psychic(1).png](https://gabietaylor.github.io/Psychic-Game/)
+[![Alt text](assets/images/psychic1.png](https://gabietaylor.github.io/Psychic-Game/)
 # Wins
-[![Alt text](assets/images/psychic(2).png](https://gabietaylor.github.io/Psychic-Game/)
+[![Alt text](assets/images/psychic2.png](https://gabietaylor.github.io/Psychic-Game/)
 # Losses
-[![Alt text](assets/images/psychic(3).png](https://gabietaylor.github.io/Psychic-Game/)
+[![Alt text](assets/images/psychic3.png](https://gabietaylor.github.io/Psychic-Game/)
 # Tallies
-[![Alt text](assets/images/psychic(4).png](https://gabietaylor.github.io/Psychic-Game/)
+[![Alt text](assets/images/psychic4.png](https://gabietaylor.github.io/Psychic-Game/)
